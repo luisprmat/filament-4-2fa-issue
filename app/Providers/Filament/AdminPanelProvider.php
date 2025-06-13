@@ -30,7 +30,8 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->profile()
             ->multiFactorAuthentication([
-                AppAuthentication::make(),
+                AppAuthentication::make()
+                    ->recoverable(),
             ])
             ->login()
             ->colors([
